@@ -1,263 +1,224 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap");
 
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+/* DEFAULTS */
+body {
+  background-color: #fff;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+section {
+  padding: 0 20px;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+/* BUTTONS, LINKS */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+.button {
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: 0 -3px rgba(170, 170, 170, 0.5) inset;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+.button--primary {
+  background-color: #fff;
+  color: #333;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+.button--secondary {
+  background-color: #1368ce;
+  color: #fff;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+.navbar__button--secondary {
+  background-color: #26890c;
+  color: #fff;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+/* NAV */
+.navbar {
+  position: sticky;
+  top: 0;
+  min-height: 60px;
+  display: flex;
+  /*padding: 16px;*/
+  padding: 20px 20px 0;
+  color: white;
+  font-size: 14px;
+  background-color: #1f0b3d;
 }
 
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+.navbar li {
+  display: inline-block;
+  list-style: none;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+.navbar__link {
+  padding-right: 8px;
+  width: 100%;
+  padding: 10px 8px 10px 0;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
+.navbar__link a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  width: 80%;
 }
 
-.clearfix::after {
-  clear: both;
+.navbar__link--logo {
+  padding-top: 0;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+.navbar__items {
+  display: flex;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+.navbar__items--right {
+  margin-left: auto;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.navbar__items--right .navbar__link {
+}
 
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+.navbar__link-toggle {
+  display: none;
+}
+
+.navbar__icon {
+  padding: 0 40px 5px 40px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.navbar__icon--school {
+  background-image: url(../img/icon_school.png);
+}
+
+.navbar__icon--home {
+  background-image: url(../img/icon_home.png);
+}
+
+.navbar__icon--work {
+  background-image: url(../img/icon_work.png);
+}
+
+.navbar__icon--academy {
+  background-image: url(../img/icon_academy.png);
+}
+
+.navbar__icon--pricing {
+  background-image: url(../img/icon_pricing.png);
+}
+
+/* HERO */
+
+.hero {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  min-height: 600px;
+  background-color: #46178f;
+  border-bottom: 20px solid #46178f;
+  border-radius: 50% / 0 0 50px 50px;
+}
+
+.hero__background--playing {
+  background-image: url("../img/children_learning_345.png");
+}
+
+.hero__text {
+  width: 80%;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar__items,
+  .navbar {
+    flex-direction: column;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
+  .navbar__link {
+    padding-right: 8px;
+    width: auto;
+    padding: 0 8px 0 0;
   }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
+  .navbar__items {
+    display: none;
   }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
+  .navbar__items--right {
+    margin-left: 0;
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  .navbar__toggleShow {
+    display: flex;
   }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
+  .navbar__link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
   }
 }
 
+/* RESPONSIVE */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar {
+    background-color: #46178f;
+  }
+  .display__hidden--md {
+    display: none;
+  }
+  .hero {
+    min-height: 500px;
+  }
+  .hero__background--playing {
+    background-image: url("../img/children_learning_690.png");
+    background-image: -webkit-image-set(
+      url("../img/children_learning_690.png") 1x,
+      url("../img/children_learning_1380.png") 2x
+    );
+    background-image: image-set(
+      url("../img/children_learning_690.png") 1x,
+      url("../img/children_learning_1380.png") 2x
+    );
+  }
+  .hero__text {
+    width: 50%;
+    padding: 100px 0 0 40px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

@@ -23,19 +23,58 @@
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
+  <section class="navbar">
+    <div class="navbar__link--logo">
+      <a href="#"><img src="img/logo_kahoot.png" alt="Kahoot logo" /></a>
+     </div>
+     <div class="navbar__link-toggle">
+       <img src="img/icon_menu.png" alt="Menu" />
+     </div>
+   <nav class="navbar__items">
+     <ul>
+     <li class="navbar__link navbar__item">
+       <a href="#" class="navbar__icon navbar__icon--school">School</a>
+     </li>
+     <li class="navbar__link">
+      <a href="#"class="navbar__icon navbar__icon--home">Home</a>
+     </li>
+     <li class="navbar__link">
+      <a href="#"class="navbar__icon navbar__icon--work">Work</a>
+     </li>
+     <li class="navbar__link">
+      <a href="#"class="navbar__icon navbar__icon--academy">Academy</a>
+    </li>
+    <li class="navbar__link">
+      <a href="#"class="navbar__icon navbar__icon--pricing">Pricing</a>
+    </li>
+  </ul>
+   </nav>
+   <nav class="navbar__items navbar__items--right">
+     <ul>
+     <li class="navbar__link">
+      <a href="#" class="button navbar__button--secondary">Sign up</a>
+     </li>
+     <li class="navbar__link">
+      <a href="#">Log in</a>
+     </li>
+     <li class="navbar__link">
+      <a href="#"><img src="img/icon_language.png" alt="Choose language" /><span class="display__hidden--md">Choose language</span></a>
+    </li>
+  </ul>
+   </nav>
+  </section>
+  <main>
+    <section class="hero hero__background--playing">
+      <div class="hero__text hero__text--left">
+      <h1>Make learning awesome</h1>
+      <p>Kahoot! platform is an engaging tool for learning, training and business meetings. Create, host and share your Kahoots with students, co-workers or even with your friends and family.</p>
+      <p>Kahoot! makes learning fun and awesome!</p>
+      <a class="button button--primary" href="">Sign up for free</a>
+      <a class="button button--secondary" href="">Create Kahoot!</a>
+    </div>
+    </section>
+  </main>
   <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
