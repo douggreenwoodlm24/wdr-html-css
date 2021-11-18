@@ -45,6 +45,7 @@ section {
 .navbar__button--secondary {
   background-color: #26890c;
   color: #fff;
+  padding: 10px;
 }
 
 /* NAV */
@@ -53,7 +54,6 @@ section {
   top: 0;
   min-height: 60px;
   display: flex;
-  /*padding: 16px;*/
   padding: 20px 20px 0;
   color: white;
   font-size: 14px;
@@ -130,14 +130,15 @@ section {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: right bottom;
-  min-height: 600px;
+  min-height: 500px;
   background-color: #46178f;
+  background-size: 40%;
   border-bottom: 20px solid #46178f;
   border-radius: 50% / 0 0 50px 50px;
 }
 
 .hero__background--playing {
-  background-image: url("../img/children_learning_345.png");
+  background-image: url("../img/children_learning_690.png");
 }
 
 .hero__text {
@@ -145,16 +146,13 @@ section {
   padding: 40px;
 }
 
+/* RESPONSIVE */
+
+/* Small devices only  */
 @media only screen and (max-width: 768px) {
   .navbar__items,
   .navbar {
     flex-direction: column;
-  }
-
-  .navbar__link {
-    padding-right: 8px;
-    width: auto;
-    padding: 0 8px 0 0;
   }
 
   .navbar__items {
@@ -177,8 +175,6 @@ section {
   }
 }
 
-/* RESPONSIVE */
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
@@ -191,34 +187,106 @@ section {
   .display__hidden--md {
     display: none;
   }
+
+  .navbar__link {
+    width: auto;
+    padding: 0 8px 0 0;
+  }
+
+  .navbar__link a {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: inline-block;
+    width: auto;
+  }
+
+  .navbar__link .navbar__button--secondary {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .navbar__items--right ul {
+    margin-top: 5px;
+  }
+
+  .navbar__icon {
+    padding: 0 3px 5px 3px;
+    background: none;
+  }
+
   .hero {
     min-height: 500px;
   }
-  .hero__background--playing {
-    background-image: url("../img/children_learning_690.png");
-    background-image: -webkit-image-set(
-      url("../img/children_learning_690.png") 1x,
-      url("../img/children_learning_1380.png") 2x
-    );
-    background-image: image-set(
-      url("../img/children_learning_690.png") 1x,
-      url("../img/children_learning_1380.png") 2x
-    );
-  }
+
   .hero__text {
-    width: 50%;
+    width: 70%;
     padding: 100px 0 0 40px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .navbar__link a {
+    min-height: 23px;
+  }
+
+  .navbar__link .navbar__button--secondary {
+    min-height: auto;
+  }
+
+  .hero {
+    min-height: 500px;
+    background-size: 50%;
+  }
+
+  .hero__text {
+    width: 50%;
+    padding: 100px 0 0 40px;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .navbar__icon {
+    padding: 0 40px 5px 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left -2px;
+  }
+  .navbar__icon--school {
+    background-image: url(../img/icon_school.png);
+  }
+
+  .navbar__icon--home {
+    background-image: url(../img/icon_home.png);
+  }
+
+  .navbar__icon--work {
+    background-image: url(../img/icon_work.png);
+  }
+
+  .navbar__icon--academy {
+    background-image: url(../img/icon_academy.png);
+  }
+
+  .navbar__icon--pricing {
+    background-image: url(../img/icon_pricing.png);
+  }
+
+  .hero {
+    min-height: 500px;
+    background-size: 55%;
+  }
+
+  .hero__text {
+    padding: 60px 0 0 40px;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
