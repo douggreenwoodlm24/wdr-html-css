@@ -30,38 +30,6 @@
      <div class="navbar__link-toggle">
        <img src="img/icon_menu.png" alt="Menu" />
      </div>
-   <!-- <nav class="navbar__items" aria-label="Navigation for: Main categories">
-     <ul>
-     <li class="navbar__link navbar__item">
-       <a href="#" class="navbar__icon navbar__icon--school">School</a>
-     </li>
-     <li class="navbar__link">
-      <a href="#"class="navbar__icon navbar__icon--home">Home</a>
-     </li>
-     <li class="navbar__link">
-      <a href="#"class="navbar__icon navbar__icon--work">Work</a>
-     </li>
-     <li class="navbar__link">
-      <a href="#"class="navbar__icon navbar__icon--academy">Academy</a>
-    </li>
-    <li class="navbar__link">
-      <a href="#"class="navbar__icon navbar__icon--pricing">Pricing</a>
-    </li>
-  </ul>
-   </nav>
-   <nav class="navbar__items navbar__items--right" aria-label="Navigation for: Sign up, log in and change language">
-     <ul>
-     <li class="navbar__link">
-      <a href="#" class="button navbar__button--secondary">Sign up</a>
-     </li>
-     <li class="navbar__link">
-      <a href="#">Log in</a>
-     </li>
-     <li class="navbar__link">
-      <a href="#"><img src="img/icon_language.png" role="button" alt="Choose language" /><span class="display__hidden--md" aria-hidden="true">Choose language</span></a>
-    </li>
-  </ul>
-   </nav> -->
    <nav role="presentation" aria-label="Main Navigation" id="navbar__dropdown--container" class="navbar__items">
     <ul>
             <li class="has-submenu">
@@ -81,9 +49,9 @@
         </li>
         <li><a class="navbar__icon navbar__icon--academy" href="#navbar__dropdown--container">Academy</a></li>
         <li><a class="navbar__icon navbar__icon--pricing" href="#navbar__dropdown--container">Pricing</a></li>
-        <li><a class="navbar__button--secondary" href="#navbar__dropdown--container">Sign&nbsp;up</a></li>
-        <li><a class="navbar__icon navbar__icon--none" href="#navbar__dropdown--container">Log in</a></li>
-        <li class="has-submenu">
+        <li class="navbar__push navbar__push--start"><a class="navbar__button--secondary" href="#navbar__dropdown--container">Sign&nbsp;up</a></li>
+        <li class="navbar__push"><a class="navbar__icon navbar__icon--none" href="#navbar__dropdown--container">Log in</a></li>
+        <li class="has-submenu navbar__push">
           <a class="navbar__icon navbar__icon--none" href="#navbar__dropdown--container" aria-expanded="false" aria-haspopup="true"><img src="img/icon_language.png" role="button" alt="Choose language" /><span class="display__hidden--md" aria-hidden="true">Choose language</span></a>
           <ul>
                   <li><a href="#navbar__dropdown--container">Subnav item 1</a></li>

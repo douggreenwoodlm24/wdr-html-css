@@ -86,8 +86,8 @@ section {
 }
 #navbar__dropdown--container a:hover,
 #navbar__dropdown--container a:focus {
-  background-color: #fff;
-  color: #036;
+  background-color: rgb(202, 202, 202);
+  color: #46178f;
   /* border: 1px solid #036; */
   text-decoration: underline;
 }
@@ -150,9 +150,7 @@ section {
   width: 80%;
 }
 
-.navbar__link--logo {
-  padding-top: 0;
-}
+
 
 .navbar__items {
   display: flex;
@@ -161,6 +159,10 @@ section {
 .navbar__items--right {
   margin-left: auto;
 }*/
+
+.navbar__link--logo {
+  margin-right: 20px;
+}
 
 .navbar__link-toggle {
   display: none;
@@ -258,9 +260,6 @@ section {
     display: none;
   }
 
-  .navbar__items {
-  }
-
   /* .navbar__link {
     width: auto;
     padding: 0 8px 0 0;
@@ -296,11 +295,27 @@ section {
   }
   #navbar__dropdown--container > ul > li {
     display: inline-block;
-    width: 20%;
-    width: 100%;
-    padding: 0 10px;
+    width: auto;
+    padding: 0;
     position: relative;
     list-style: none;
+  }
+
+  #navbar__dropdown--container > ul > li .navbar__icon--none {
+    padding: 10px 20px 5px 20px;
+  }
+
+  #navbar__dropdown--container > ul > .navbar__push {
+    width: 8%;
+  }
+
+  #navbar__dropdown--container > ul > .navbar__push--start {
+    margin-left: auto;
+  }
+
+  #navbar__dropdown--container > ul > li > a {
+    height: 100%;
+    padding-top: 10px;
   }
 
   #navbar__dropdown--container > ul > li > ul {
@@ -315,9 +330,11 @@ section {
     padding: 10px 0 10px 10px;
   }
 
-  .navbar__button--secondary {
-    padding: 0 5px 5px;
+  #navbar__dropdown--container > ul > li .navbar__button--secondary {
+    padding: 10px 5px 5px;
     text-align: center;
+    height: 20px;
+    width: auto;
   }
 
   .hero {
@@ -357,7 +374,7 @@ section {
     padding: 0 40px 5px 40px;
     background-color: transparent;
     background-repeat: no-repeat;
-    background-position: left -2px;
+    background-position: left 7px;
   }
   .navbar__icon--school {
     background-image: url(../img/icon_school.png);
